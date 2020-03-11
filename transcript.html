@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Accordion example</title>
+<meta charset="utf-8" />
+<meta name="author" content="Nicolas Hoffmann" />
+
+<meta name="viewport" content="width=device-width" />
+
+
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<style>
+
+#content {
+    margin: 0 0 15px 0;
+    float: left;
+    border: none;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    display: inline;
+    direction: ltr;
+    padding: 0 0 65px 0;
+    width: 740px;
+    font-size: 118%;
+}
+
+
+
+.accordion li {
+    list-style-type: none;
+}
+.accordion-control {
+    background: transparent;
+    border: none;
+    color: #0079c9;
+    cursor: pointer;
+    font-size: 115%;
+    outline: none;
+    padding: 0.75rem 1rem .75rem .75rem;
+    position: relative;
+}
+.accordion-control::after {
+    content: '';
+    background: url( img/arrow-down.svg ) no-repeat 0px 0px / 13px 9px;
+    height: 9px;
+    position: absolute;
+    width: 13px;
+    top: 24px;
+    right: 0px;
+}
+
+.accordion-control[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.accordian-title {
+    box-shadow: inset 0 -4px 0 0 transparent;
+    display: block;
+    line-height: 1.5;
+    margin-left: -.5rem;
+    padding-bottom: .75rem;
+    position: relative;
+    padding-right: 1.5rem;
+}
+.accordian-title:hover {
+    text-decoration: underline;
+}
+
+
+.accordion #transcript {
+    width: 100%;
+    display: none;
+}
+
+
+
+
+</style>
+
+
+</head>
+<body >
+
+<div id="content">
+
+  <div class="videotext">
+
+
+    <ul aria-label="Accordion Buttons" class="accordion">
+      <li>
+        <button aria-controls="transcript" aria-expanded="false" class="accordion-control">
+          <span class="accordian-title">Transcript</span>
+        </button>
+        <div aria-hidden="true" id="transcript">
+
+          <h2>Maia Rauhina – LSV Graduate from Whanganui</h2>
+
+          <p class="summary">This is the transcript of the video Maia Rauhina – LSV Graduate from Whanganui</p>
+  
+          <p>A Fresh Start</p>
+          
+          <p>Name graphic: Maia, 2019 LSV graduate</p>
+          
+          <p>V/O transcript</p>
+          
+          <p>“I would say to those who are struggling to get a job, to find direction in life, to join LSV</p>
+          
+          <p>At the start it was challenging and a struggle, didn’t understand why we did what we did.</p>
+          
+          <p>But then as I started to build with everyone; you start to build a family; you start to build a connection.</p>
+          
+          <p>One of the best things I got out of LSV was, probably for the long run, a job. Throughout LSV they hold a work expedition which a lot of employers come around from NZ.</p>
+          
+          <p>Having a job will mean a lot for me. It’ll help me grow independently. I’ll be earning my own money which will feel more rewarding and deserving.</p>
+          
+          <p>And you grow so much. You don’t see it but the people around you see it and then your families will see it when you get back.</p>
+          
+          <p>And at the end you feel so proud to be who you are.”</p>
+
+
+        </div>
+      </li>
+  
+    </ul>
+  </div>
+
+</div>
+
+
+
+  <script>
+    var accordionButtons = $('.accordion-control');
+
+function accordionToggle() {
+  $(accordionButtons).on('click', function(e) {
+    $control = $(this);
+
+    accordionContent = $control.attr('aria-controls');
+    checkOthers($control[0]);
+
+    isAriaExp = $control.attr('aria-expanded');
+    newAriaExp = (isAriaExp == "false") ? "true" : "false";
+    $control.attr('aria-expanded', newAriaExp);
+
+    isAriaHid = $('#' + accordionContent).attr('aria-hidden');
+    if (isAriaHid == "true") {
+      $('#' + accordionContent).attr('aria-hidden', "false");
+      $('#' + accordionContent).css('display', 'block');
+    } else {
+      $('#' + accordionContent).attr('aria-hidden', "true");
+      $('#' + accordionContent).css('display', 'none');
+    }
+  });
+};
+
+function checkOthers(elem) {
+  for (var i=0; i<accordionButtons.length; i++) {
+    if (accordionButtons[i] != elem) {
+      if (($(accordionButtons[i]).attr('aria-expanded')) == 'true') {
+        $(accordionButtons[i]).attr('aria-expanded', 'false');
+        content = $(accordionButtons[i]).attr('aria-controls');
+        $('#' + content).attr('aria-hidden', 'true');
+        $('#' + content).css('display', 'none');
+      }
+    }
+  }
+};
+
+//call this function on page load
+accordionToggle();
+  </script>
+
+
+</body>
+</html>
