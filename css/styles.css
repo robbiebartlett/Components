@@ -1,61 +1,182 @@
+
+
+
+/*
+ *  WandI
+ */
+ body {
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #fff;
+  direction: ltr;
+  font-family: 'Fira Sans', 'Gill Sans', sans-serif;
+  font-size: 100%;
+  color: #111111;
+}
+ h2, h3, h4, h5 {
+
+  margin: 0;
+  padding: 2px 0;
+  font-family: 'Fira Sans', sans-serif;
+  color: #222222;
+  font-weight: 500;
+
+}
+
 #content {
-    margin: 0 0 15px 0;
-    float: left;
-    border: none;
-    height: 100%;
-    margin: 0;
-    position: relative;
-    display: inline;
-    direction: ltr;
-    padding: 0 0 65px 0;
-    width: 740px;
-    font-size: 118%;
+  margin: 0 0 15px 0;
+  float: left;
+  border: none;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  display: inline;
+  direction: ltr;
+  padding: 0 0 65px 0;
+  width: 77.777%; /* temporary responsive */
+  font-size: 118%;
+}
+
+#content .leftFloat {
+  padding: 3px 8px 0 0;
+  margin: 0 0 8px 0;
+  float: left;
+  position: relative;
+  display: block;
+  clear: both;
+  width: 100%;
 }
 
 
 
-.accordion li {
-    list-style-type: none;
+/*
+ *  Temporary
+ */
+
+.wrapper {
+  margin: 10% auto;
+  display: block;
+  width: 100%;
+  max-width: 1070px;
 }
+
+
+
+
+.videocontainer {
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  border: 0;
+  outline: 0;
+  margin-right: -8px;
+}
+.videocontainer iframe,
+.videocontainer object,
+.videocontainer  embed {
+  background-color: #F6F6F6;
+  border: 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+.accordion {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.button-wrapper {
+
+  display: block;
+  background-color: #F5F5F5;
+  margin: 0 0 20px;
+  padding: 0;
+
+}
+
+
+
+
 .accordion-control {
-    background: transparent;
-    border: none;
-    color: #0079c9;
-    cursor: pointer;
-    font-size: 115%;
-    outline: none;
-    padding: 0.75rem 1rem .75rem .75rem;
-    position: relative;
+  background: transparent;
+  border: none;
+  color: #111;
+  cursor: pointer;
+  font-size: 115%;
+  outline: none;
+  padding: 0 1rem .75rem .75rem;
+  position: relative;
 }
 .accordion-control::after {
-    content: '';
-    background: url( img/arrow-down.svg ) no-repeat 0px 0px / 13px 9px;
-    height: 9px;
-    position: absolute;
-    width: 13px;
-    top: 24px;
-    right: 0px;
+  content: '';
+  background: url( https://www.workandincome.govt.nz/webadmin/images/menu-arrow.svg ) no-repeat 0px 0px / 13px 9px;
+  filter: invert(0);
+  height: 9px;
+  position: absolute;
+  width: 13px;
+  top: 14px;
+  right: 20px;
+  z-index: 0;
 }
 
 .accordion-control[aria-expanded="true"]::after {
-  transform: rotate(180deg);
+transform: rotate(180deg);
 }
+
+
 
 .accordian-title {
-    box-shadow: inset 0 -4px 0 0 transparent;
-    display: block;
-    line-height: 1.5;
-    margin-left: -.5rem;
-    padding-bottom: .75rem;
-    position: relative;
-    padding-right: 1.5rem;
+  box-shadow: inset 0 -4px 0 0 transparent;
+  display: block;
+  line-height: 1.5;
+  padding-right: 35px;
+  position: relative;
+  z-index: 5;
 }
 .accordian-title:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 
-.accordion #transcript {
-    width: 100%;
-    display: none;
+.accordion .transcript {
+  background-color: #f5f5f5;
+  display: none;
+  margin: 0;
+  padding: 15px;
+}
+
+
+.transcript .wrapper {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.transcript .container {
+
+  background-color: #fff;
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: scroll;
+  box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.18);
+
 }
