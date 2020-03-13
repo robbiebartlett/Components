@@ -1,40 +1,15 @@
-
-var accordionButtons = $('.accordion-control');
-
-function accordionToggle() {
-$(accordionButtons).on('click', function(e) {
-$control = $(this);
-
-accordionContent = $control.attr('aria-controls');
-checkOthers($control[0]);
-
-isAriaExp = $control.attr('aria-expanded');
-newAriaExp = (isAriaExp == "false") ? "true" : "false";
-$control.attr('aria-expanded', newAriaExp);
-
-isAriaHid = $('.' + accordionContent).attr('aria-hidden');
-if (isAriaHid == "true") {
-  $('.' + accordionContent).attr('aria-hidden', "false");
-  $('.' + accordionContent).css('display', 'block');
-} else {
-  $('.' + accordionContent).attr('aria-hidden', "true");
-  $('.' + accordionContent).css('display', 'none');
-}
-});
-};
-
-function checkOthers(elem) {
-for (var i=0; i<accordionButtons.length; i++) {
-if (accordionButtons[i] != elem) {
-  if (($(accordionButtons[i]).attr('aria-expanded')) == 'true') {
-    $(accordionButtons[i]).attr('aria-expanded', 'false');
-    content = $(accordionButtons[i]).attr('aria-controls');
-    $('.' + content).attr('aria-hidden', 'true');
-    $('.' + content).css('display', 'none');
-  }
-}
-}
-};
-
-//call this function on page load
-accordionToggle();
+(function() {
+  const headings = document.querySelectorAll('.button-wrapper');
+  
+  Array.prototype.forEach.call(headings, h => {
+    let btn = h.querySelector('button');
+    let target = h.nextElementSibling;
+    
+    btn.onclick = () => {
+      let expanded = btn.getAttribute('aria-expanded') === 'true';
+      
+      btn.setAttribute('aria-expanded', !expanded);
+      target.hidden = expanded;  
+    }
+  });
+})()
