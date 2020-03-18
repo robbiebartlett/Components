@@ -1,6 +1,3 @@
-/*
- *  WandI
- */
  body {
   margin: 0;
   padding: 0;
@@ -31,39 +28,6 @@
   display: block;
   width: 100%;
   max-width: 1070px;
-}
-
-
-
-
-/*
- * Responsive video
- */
-
- .videocontainer {
-  border: 0;
-  box-sizing: border-box;
-  height: 0;
-  margin-right: -8px;
-  max-width: 100%;
-  outline: 0;
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-}
-
-.videocontainer iframe,
-.videocontainer object,
-.videocontainer  embed {
-  background-color: #DDD;
-  border: 0;
-  box-sizing: border-box;
-  height: 100%;
-  left: 0;
-  padding: .625rem;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }
 
 
