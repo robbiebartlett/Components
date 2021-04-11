@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <!-- Miscellaneous metadata
+  ================================================== -->
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="ROBOTS" content="INDEX, FOLLOW">
+
+    <!-- Mobile Specific 
+  ================================================== -->
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+        
+<title>Accessible Navigation</title>
+
+  <!-- CSS
+  ================================================== -->
+<link href="css/main.css" rel="stylesheet">
+    
+
+</head>
+
+<body>
+
+<!-- Skiplink
+================================================== -->  
+<nav id="skiplinks" aria-label="Skip Link">
+  <a class="rb-link skip-link" href="#main-content">Skip to the main content</a>
+</nav>     
+
+
+
+
+<!-- Header
+================================================== -->  
+<header class="rb-header">
+  <div class="rb-container rb-header__divider">
+    <div class="rb-grid">
+       
+    <div class="rb-grid__cell rb-grid--six-tenths">
+      <div class="rb-header__logotype">
+        <a href="#" class="rb-header__site-logo">
+           <h1>Accessible Navigation</h1>
+          </a>
+      </div>
+    </div>
+
+    <div class="rb-grid__cell rb-grid--four-tenths">
+
+        <section class="rb-navigation__toggle--wrapper">
+            <button aria-expanded="false" aria-label="Menu" class="rb-navigation__toggle">
+                Menu
+            </button>
+        </section> 
+
+    </div> 
+
+    </div>
+  </div>
+</header>
+    
+
+
+
+<!-- Navigation
+============================================== -->
+  <nav class="rb-navigation" aria-label="main menu">
+    <ul class="rb-navigation__list rb-navigation__submenu-toggle-one">
+
+        <li class="rb-navigation__list-item" aria-current="page">
+             <a class="rb-link rb-navigation-link" href="#">Link</a>
+         
+            <div class="rb-navigation-sr-expand__wrapper">
+              <button class="rb-navigation-sr-expand__btn">
+                <span class="sr-only">Show the submenu for Link</span>
+              </button>
+            </div>
+          <button aria-expanded="false" class="rb-navigation__submenu-toggle">
+            <span class="sr-only">Link Menu</span>
+          </button>
+          <ul class="rb-navigation__submenu">
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="rb-navigation__list-item">
+
+        
+          <a class="rb-link rb-navigation-link" href="#">
+            Link
+          </a>
+         
+
+          <div class="rb-navigation-sr-expand__wrapper">
+              <button class="rb-navigation-sr-expand__btn">
+                <span class="sr-only">Show submenu for Link</span>
+              </button>
+          </div>
+        
+
+          <button aria-expanded="false" class="rb-navigation__submenu-toggle">
+                <span class="sr-only">Link Menu</span>
+          </button>
+          <ul class="rb-navigation__submenu">
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="rb-navigation__list-item">
+         
+            <a class="rb-link rb-navigation-link" href="#">Link</a>
+         
+            <div class="rb-navigation-sr-expand__wrapper">
+              <button class="rb-navigation-sr-expand__btn">
+                <span class="sr-only">Show submenu for Link</span>
+              </button>
+            </div>
+              <button aria-expanded="false" class="rb-navigation__submenu-toggle">
+                <span class="sr-only">Link Menu</span>
+              </button>
+              <ul class="rb-navigation__submenu">
+                <li class="rb-navigation__list-item">
+                  <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+                </li>
+                <li class="rb-navigation__list-item">
+                  <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+                </li>
+                <li class="rb-navigation__list-item">
+                  <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+                </li>
+                <li class="rb-navigation__list-item">
+                  <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+                </li>
+                <li class="rb-navigation__list-item">
+                  <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+                </li>
+                <li class="rb-navigation__list-item">
+                  <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+                </li>
+              </ul>
+        </li>
+
+        <li class="rb-navigation__list-item">
+         
+          <a class="rb-link rb-navigation-link" href="#">Link</a>
+       
+          <div class="rb-navigation-sr-expand__wrapper">
+            <button class="rb-navigation-sr-expand__btn">
+              <span class="sr-only">Show submenu for Link</span>
+            </button>
+          </div>
+            <button aria-expanded="false" class="rb-navigation__submenu-toggle">
+              <span class="sr-only">Link Menu</span>
+            </button>
+            <ul class="rb-navigation__submenu">
+              <li class="rb-navigation__list-item">
+                <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+              </li>
+              <li class="rb-navigation__list-item">
+                <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+              </li>
+              <li class="rb-navigation__list-item">
+                <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+              </li>
+              <li class="rb-navigation__list-item">
+                <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+              </li>
+              <li class="rb-navigation__list-item">
+                <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+              </li>
+              <li class="rb-navigation__list-item">
+                <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+              </li>
+            </ul>
+      </li>
+
+      <li class="rb-navigation__list-item">
+         
+        <a class="rb-link rb-navigation-link" href="#">Link</a>
+     
+        <div class="rb-navigation-sr-expand__wrapper">
+          <button class="rb-navigation-sr-expand__btn">
+            <span class="sr-only">Show submenu for Link</span>
+          </button>
+        </div>
+          <button aria-expanded="false" class="rb-navigation__submenu-toggle">
+            <span class="sr-only">Link Menu</span>
+          </button>
+          <ul class="rb-navigation__submenu">
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+            <li class="rb-navigation__list-item">
+              <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+            </li>
+          </ul>
+    </li>
+
+    <li class="rb-navigation__list-item">
+         
+      <a class="rb-link rb-navigation-link" href="#">Link</a>
+   
+      <div class="rb-navigation-sr-expand__wrapper">
+        <button class="rb-navigation-sr-expand__btn">
+          <span class="sr-only">Show submenu for Link</span>
+        </button>
+      </div>
+        <button aria-expanded="false" class="rb-navigation__submenu-toggle">
+          <span class="sr-only">Link Menu</span>
+        </button>
+        <ul class="rb-navigation__submenu">
+          <li class="rb-navigation__list-item">
+            <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+          </li>
+          <li class="rb-navigation__list-item">
+            <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+          </li>
+          <li class="rb-navigation__list-item">
+            <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+          </li>
+          <li class="rb-navigation__list-item">
+            <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+          </li>
+          <li class="rb-navigation__list-item">
+            <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+          </li>
+          <li class="rb-navigation__list-item">
+            <a class="rb-link rb-navigation__submenu-link" href="#">Sub Link</a>
+          </li>
+        </ul>
+  </li>
+
+
+    </ul>
+  </nav>
+
+
+
+
+<!-- Main Content
+============================================== -->
+<main id="main-content" style="margin-top:2rem; min-height: 600px;">
+  <div class="rb-container">
+    <div class="rb-grid">
+      <div class="rb-grid__cell">
+      <h2><span class="sr-only">main</span></h2>
+      <p>This responsive navigation is fully accessible, try accessing all links with your keyboard and/or screen reader only. Use the Tab, Shift and Enter keys to access all links.</p>
+     </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+<!-- Footer
+============================================== -->
+<footer>
+  <div class="rb-container">
+    <div class="rb-grid">
+      <div class="rb-grid__cell">
+      <h2><span class="sr-only">footer</span></h2>
+     </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<!-- JavaScript
+================================================== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>
